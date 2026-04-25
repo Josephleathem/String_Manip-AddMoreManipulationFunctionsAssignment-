@@ -26,7 +26,27 @@ Notes for the difference between the two files:
 - The source code allows instructors to evaluate their logic, structure, and syntax and test it themselves.
 - A screenshot only shows a static result that the student tested, but instructors can't run, verify, or review the full code/script if it's long.
 
-## Setup
+## What I Did
+
+Following the TDD red-green-refactor workflow, I added 4 new string manipulation functions to `string_manip.py` along with 23 new tests in `test_string_manip.py`.
+
+### Red Phase
+I wrote 23 new failing tests in `test_string_manip.py` for four functions that did not yet exist:
+
+- `reverse_string` — returns a string reversed
+- `count_vowels` — counts vowels (a, e, i, o, u) case-insensitively
+- `is_palindrome` — checks if a string reads the same forwards and backwards, ignoring case and spaces
+- `truncate` — clips a string to a maximum length and appends `...` if it was shortened
+
+Each function had tests covering normal behavior, edge cases (empty strings, exact length), and invalid input (`TypeError` and `ValueError`). Running pytest at this stage showed all 23 new tests failing.
+
+### Green Phase
+I implemented all four functions in `string_manip.py` with proper input validation. Running pytest again showed all 30 tests passing (the original 7 plus the 23 new ones).
+
+### Results
+```
+30 passed in 0.14s
+```
 Open and access VS Code.
 
 ## Lab Steps
